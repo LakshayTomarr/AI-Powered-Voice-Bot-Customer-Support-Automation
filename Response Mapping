@@ -1,0 +1,29 @@
+INTENT_MAP = {
+    0: "order_status",
+    1: "cancel_order",
+    2: "refund_request",
+    3: "subscription_issue",
+    4: "payment_issue",
+    5: "delivery_delay",
+    6: "account_update",
+    7: "technical_support",
+    8: "complaint",
+    9: "greeting"
+}
+
+RESPONSES = {
+    "order_status": "Please provide your order ID.",
+    "cancel_order": "Your cancellation request has been initiated.",
+    "refund_request": "Your refund request is being processed.",
+    "subscription_issue": "Let me help you with subscription issues.",
+    "payment_issue": "Please verify your payment method.",
+    "delivery_delay": "We apologize for the delay.",
+    "account_update": "Your account update is being processed.",
+    "technical_support": "Please describe your issue.",
+    "complaint": "We are sorry for the inconvenience.",
+    "greeting": "Hello! How may I assist you today?"
+}
+
+def generate_response(intent_id):
+    intent = INTENT_MAP.get(intent_id)
+    return RESPONSES.get(intent, "I did not understand your request.")
