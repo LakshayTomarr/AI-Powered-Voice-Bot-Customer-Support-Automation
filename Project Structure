@@ -1,0 +1,29 @@
+voicebot-ai/
+│
+├── app/
+│   ├── main.py
+│   ├── config.py
+│   │
+│   ├── routes/
+│   │   └── voice_routes.py
+│   │
+│   ├── services/
+│   │   ├── asr_service.py
+│   │   ├── intent_service.py
+│   │   ├── response_service.py
+│   │   ├── tts_service.py
+│   │
+│   ├── utils/
+│   │   ├── logger.py
+│   │   ├── metrics.py
+│   │
+│   └── models/
+│       └── intent_model/
+│
+├── training/
+│   ├── train_intent_model.py
+│   └── dataset.csv
+│
+├── requirements.txt
+├── README.md
+└── run.sh
