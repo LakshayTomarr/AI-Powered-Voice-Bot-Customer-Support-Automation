@@ -1,0 +1,11 @@
+# app/services/tts_service.py
+
+from TTS.api import TTS
+
+class TTSService:
+    def __init__(self):
+        self.tts = TTS("tts_models/en/ljspeech/tacotron2-DDC")
+
+    def synthesize(self, text, output_path="response.wav"):
+        self.tts.tts_to_file(text=text, file_path=output_path)
+        return output_path
